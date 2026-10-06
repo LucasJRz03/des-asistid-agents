@@ -17,5 +17,5 @@
 Antes de declarar una tarea como "Done", el agente DEBE obligatoriamente:
 1. Asegurarse de que el código no tenga errores de TypeScript.
 2. Ejecutar el linter (`pnpm lint`) y corregir cualquier error o advertencia.
-3. Ejecutar el formatter si existe el script de formato.
+3. Ejecutar el formatter (`pnpm format`) si existe el script de formato.
 4. No incluir archivos innecesarios ni logs de prueba olvidados.
