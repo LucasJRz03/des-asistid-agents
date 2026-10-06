@@ -18,11 +18,12 @@ type ActivityWithCategory = (typeof initialActivities)[number] & {
 
 const initialCategories = ['Bienestar', 'Arte', 'Fitness']
 
-const activitiesWithCategories: ActivityWithCategory[] =
-  initialActivities.map((activity, index) => ({
+const activitiesWithCategories: ActivityWithCategory[] = initialActivities.map(
+  (activity, index) => ({
     ...activity,
     categoria: initialCategories[index] ?? 'General',
-  }))
+  })
+)
 
 const dateFormatter = new Intl.DateTimeFormat('es-AR', {
   dateStyle: 'long',
@@ -158,9 +159,7 @@ function App() {
                     min="0"
                     step="1"
                     value={cupoDisponible}
-                    onChange={(event) =>
-                      setCupoDisponible(event.target.value)
-                    }
+                    onChange={(event) => setCupoDisponible(event.target.value)}
                     placeholder="Ej. 12"
                     required
                   />
@@ -282,7 +281,9 @@ function App() {
                           </dt>
                           <dd className="m-0 text-sm font-medium text-foreground">
                             {activity.cupoDisponible}{' '}
-                            {activity.cupoDisponible === 1 ? 'lugar' : 'lugares'}
+                            {activity.cupoDisponible === 1
+                              ? 'lugar'
+                              : 'lugares'}
                           </dd>
                         </div>
                       </dl>
@@ -318,9 +319,7 @@ function App() {
                         aria-expanded={isExpanded}
                         aria-controls={detailId}
                         onClick={() =>
-                          setExpandedActivityId(
-                            isExpanded ? null : activity.id
-                          )
+                          setExpandedActivityId(isExpanded ? null : activity.id)
                         }
                       >
                         {isExpanded ? 'Ocultar detalle' : 'Ver detalle'}

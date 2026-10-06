@@ -1,9 +1,9 @@
 export interface Activity {
-  id: number;
-  nombre: string;
-  fecha: string;
-  cupoDisponible: number;
-  estado: 'abierta' | 'llena';
+  id: number
+  nombre: string
+  fecha: string
+  cupoDisponible: number
+  estado: 'abierta' | 'llena'
 }
 
 export const activities: Activity[] = [
@@ -28,4 +28,4 @@ export const activities: Activity[] = [
     cupoDisponible: 5,
     estado: 'abierta',
   },
-];
+]
